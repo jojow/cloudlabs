@@ -1,18 +1,20 @@
 syntax = "proto3";
 
+//package webshop;
+
 
 
 message Product {
-  string id = 1; // should be a valid UUID
+  string id = 1; // product ID should be a valid UUID
   string name = 2;
   string category = 3; // for example: USB thumb drives, flashlights, ...
-  string producer = 4;
+  string producer = 4; // producer name
   float weight = 5; // in kilogram
   float price = 6; // in EUR
 }
 
 message ProductId {
-  string id = 1; // should be a valid UUID
+  string id = 1;
 }
 
 message ListProductsParams {
@@ -32,15 +34,16 @@ message Customer {
 }
 
 message Order {
-  string id = 1;
-  Customer customer = 2;
+  optional string id = 1; // order ID
+  repeated ProductId products = 2;
+  Customer customer = 3;
   enum Status {
     NEW = 0;
     PAYED = 1;
     SHIPPED = 2;
     CANCELED = 3;
   }
-  Status status = 3;
+  Status status = 4 [default = NEW];
 }
 
 message OrderId {
