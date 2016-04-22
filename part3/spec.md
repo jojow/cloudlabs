@@ -4,7 +4,7 @@
 
 * The `/api` directory is a shared Docker volume. It is provided by the gRPC API container and used by the API adapter container. The API adapter container loads the `/api/main.proto` file to communicate with the gRPC API container.
 
-* The `/api/main.proto` file is the *only* required file. Therefore each API adapter must work properly based on this file without any additional metadata.
+* The `/api/main.proto` file is the *only* required file. Therefore each API adapter *must* work properly based on this file without any additional metadata.
 
 * The `/api` directory *can* optionally contain additional files such as metadata, which may be read and considered by certain API adapters.
 
@@ -14,4 +14,4 @@
 
 * The environment variables `API_HOST` (IP address or hostname) and `API_PORT` (port number) *must* be provided to the API adapter, so the adapter can connect to the gRPC API.
 
-* The environment variable `API_PROTO_PATH` *can* optionally be provided to the API adapter to load another proto3 file instead of the default (`/api/main.proto`).
+* The environment variable `API_PROTO_PATH` *can* optionally be provided to the API adapter to load another proto3 file instead of the default `/api/main.proto`. Each API adapter *must* process and respect this variable if it is set.
