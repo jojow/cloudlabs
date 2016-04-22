@@ -14,4 +14,4 @@
 
 * The environment variables `API_HOST` (IP address or hostname) and `API_PORT` (port number) *must* be provided to the API adapter, so the adapter can connect to the gRPC API.
 
-* The environment variable `API_PROTOPATH` *can* optionally be provided to the API adapter to load another proto3 file instead of the default (`/api/main.proto`).
+* The environment variable `API_PROTO_PATH` *can* optionally be provided to the API adapter to load another proto3 file instead of the default (`/api/main.proto`).
