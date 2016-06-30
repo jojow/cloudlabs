@@ -13,13 +13,13 @@ How the container image was built:
 
 
 
-## Puppet Group
+## Puppet Group (ACTION REQUIRED)
 
 **Please send me the link to the repo where you stored your gRPC testing API.**
 
 
 
-## SaltStack Group
+## SaltStack Group (ACTION REQUIRED)
 
 There seem to be two alternative gRPC testing APIs:
 
