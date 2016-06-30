@@ -2,20 +2,14 @@
 
 ## Chef Group
 
-I tried the following:
+Usage: `docker run -dP apibricks/chefgroup-test-grpc-api`
+
+How the container image was built:
 
     git clone https://github.com/tfreundo/gRPC-API-Tester.git chefgroup-test-grpc-api
-    cd chefgroup-test-grpc-api/docker
+    cd chefgroup-test-grpc-api/docker-testapi
     docker build -f Dockerfile-testgrpcserver -t apibricks/chefgroup-test-grpc-api .
-
-During build the following error occurs:
-
-    Step 13 : RUN npm --quiet install
-     ---> Running in 659e0f223f5f
-    npm WARN enoent ENOENT: no such file or directory, open '/home/grpcserver/gRPC-API-Tester/api/package.json'
-    npm WARN ...
-
-**Please fix!**
+    docker push apibricks/chefgroup-test-grpc-api
 
 
 
