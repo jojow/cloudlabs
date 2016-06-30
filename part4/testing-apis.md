@@ -4,14 +4,16 @@
 
 I tried the following:
 
-    git clone https://github.com/tfreundo/gRPC-API-Tester.git
-    cd gRPC-API-Tester/docker
+    git clone https://github.com/tfreundo/gRPC-API-Tester.git chefgroup-test-grpc-api
+    cd chefgroup-test-grpc-api/docker
     docker build -f Dockerfile-testgrpcserver -t apibricks/chefgroup-test-grpc-api .
 
 During build the following error occurs:
 
-    Step 6 : COPY ./main.proto /api/main.proto
-    lstat main.proto: no such file or directory
+    Step 13 : RUN npm --quiet install
+     ---> Running in 659e0f223f5f
+    npm WARN enoent ENOENT: no such file or directory, open '/home/grpcserver/gRPC-API-Tester/api/package.json'
+    npm WARN ...
 
 **Please fix!**
 
