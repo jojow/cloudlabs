@@ -19,21 +19,16 @@ How the container image was built:
 
 
 
-## SaltStack Group (ACTION REQUIRED)
+## SaltStack Group
 
-There seem to be two alternative gRPC testing APIs:
+Usage: `docker run -dP apibricks/saltgroup-test-grpc-api`
 
-* https://github.com/Helmsen/gRPC-Adapter/tree/master/ContainerGrpcServerSupportedSpec
-* https://github.com/Helmsen/gRPC-Adapter/tree/master/ContainerGrpcServerFullSpec
+How the container image was built:
 
-Unfortunately, both Dockerfiles are not self-contained, so a simple `docker build ...` and `docker run ...` is not possible.
-Please add required statements to the Dockerfiles to make them self-contained:
-
-    EXPOSE ... # the port your API is listening
-    VOLUME /api
-    CMD ...
-
-**Please fix!**
+    git clone https://github.com/Helmsen/gRPC-Adapter.git saltgroup-test-grpc-api
+    cd saltgroup-test-grpc-api/ContainerGrpcServer
+    docker build -t apibricks/saltgroup-test-grpc-api .
+    docker push apibricks/saltgroup-test-grpc-api
 
 
 
