@@ -13,9 +13,16 @@ How the container image was built:
 
 
 
-## Puppet Group (ACTION REQUIRED)
+## Puppet Group (test required)
 
-**Please send me the link to the repo where you stored your gRPC testing API.**
+Usage: `docker run -dP -p 50053:50053 apibricks/puppetgroup-test-grpc-api`
+
+How the container image was built:
+
+    git clone https://github.com/shruthikuki/CloudLab-IAAS-UniStuttgart-Part3-gRPCTest puppetgroup-test-grpc-api
+    cd puppetgroup-test-grpc-api/Docker
+    docker build -t apibricks/puppetgroup-test-grpc-api .
+    docker push apibricks/puppetgroup-test-grpc-api
 
 
 
