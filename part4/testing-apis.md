@@ -13,9 +13,9 @@ How the container image was built:
 
 
 
-## Puppet Group (test required)
+## Puppet Group (TODO test required)
 
-Usage: `docker run -dP -p 50053:50053 apibricks/puppetgroup-test-grpc-api`
+Usage: `docker run -dP apibricks/puppetgroup-test-grpc-api`
 
 How the container image was built:
 
