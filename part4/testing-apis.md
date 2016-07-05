@@ -13,7 +13,7 @@ How the container image was built:
 
 
 
-## Puppet Group (TODO test required)
+## Puppet Group
 
 Usage: `docker run -dP apibricks/puppetgroup-test-grpc-api`
 
